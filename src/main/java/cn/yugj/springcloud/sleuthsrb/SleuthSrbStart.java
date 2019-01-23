@@ -1,4 +1,4 @@
-package cn.yugj.springclound.sleuthsrb;
+package cn.yugj.springcloud.sleuthsrb;
 
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.CommandLineRunner;

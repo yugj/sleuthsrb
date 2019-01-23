@@ -1,4 +1,4 @@
-package cn.yugj.springclound.sleuthsrb.support;
+package cn.yugj.springcloud.sleuthsrb.support;
 
 import brave.Tracing;
 import brave.spring.rabbit.SpringRabbitTracing;

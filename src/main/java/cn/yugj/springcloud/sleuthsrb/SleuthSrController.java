@@ -1,4 +1,4 @@
-package cn.yugj.springclound.sleuthsrb;
+package cn.yugj.springcloud.sleuthsrb;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

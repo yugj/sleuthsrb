@@ -1,4 +1,4 @@
-package cn.yugj.springclound.sleuthsrb.support;
+package cn.yugj.springcloud.sleuthsrb.support;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;

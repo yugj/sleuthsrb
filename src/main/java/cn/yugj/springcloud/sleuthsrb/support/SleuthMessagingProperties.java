@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.yugj.springclound.sleuthsrb.support;
+package cn.yugj.springcloud.sleuthsrb.support;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
