@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="true">
-    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
     <property name="APP_Name" value="sleuth-srb"/>
     <springProperty name="LOG_HOME" source="log.home"/>
