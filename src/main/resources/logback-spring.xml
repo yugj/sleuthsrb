@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <property name="APP_Name" value="sleuth-srb"/>
+    <springProperty name="LOG_HOME" source="log.home"/>
+    <contextName>${APP_Name}</contextName>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/${APP_Name}/app.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!--日志文件输出的文件名-->
+            <FileNamePattern>${LOG_HOME}/${APP_Name}/%d{yyyy-MM-dd__HH}.%i.log</FileNamePattern>
+            <maxFileSize>500MB</maxFileSize>
+        </rollingPolicy>
+
+        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder">
+
+        </encoder>
+    </appender>
+
+    <property name="LOG_HOME" value="${LOG_HOME:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}}"/>
+
+    <jmxConfigurator/>
+    <root level="info">
+        <appender-ref ref="FILE"/>
+    </root>
+
+
+</configuration>
