@@ -1,1 +1,6 @@
 spring cloud Edgware support rabbitmq tracing
+
+TODO
+原Slf4jSpanLogger 逻辑，新f版本对应SpanLogger 逻辑整合
+原span logger
+SleuthLogAutoConfiguration.Slf4jConfiguration.slf4jSpanLogger
