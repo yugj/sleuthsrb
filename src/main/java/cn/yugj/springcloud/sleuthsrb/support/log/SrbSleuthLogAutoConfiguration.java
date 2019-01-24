@@ -6,6 +6,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.sleuth.log.SleuthSlf4jProperties;
@@ -13,6 +14,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * srb sleuth log configuration
  * @author yugj
  * @date 2019/1/24 上午9:39.
  */
@@ -21,9 +23,14 @@ import org.springframework.context.annotation.Configuration;
 @EnableConfigurationProperties(SleuthSlf4jProperties.class)
 public class SrbSleuthLogAutoConfiguration {
 
+    /**
+     * sleuth 1.x 定义了slf4jSpanLogger Bean
+     * 修改下名字，sleuth 2.x 对应的Bean 对象修改了
+     * @return CurrentTraceContext
+     */
     @Bean
-//    @ConditionalOnProperty(value = "spring.sleuth.log.slf4j.enabled", matchIfMissing = true)
-//    @ConditionalOnMissingBean
+    @ConditionalOnProperty(value = "spring.sleuth.log.slf4j.enabled", matchIfMissing = true)
+    @ConditionalOnMissingBean
     public CurrentTraceContext slf4jSpanLogger2() {
         return SrbSlf4jCurrentTraceContext.create();
     }

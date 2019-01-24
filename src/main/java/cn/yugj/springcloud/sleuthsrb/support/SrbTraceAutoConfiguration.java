@@ -37,6 +37,10 @@ import java.util.Random;
  * @author Spencer Gibb
  * @author Marcin Grzejszczak
  * @since 1.0.0
+ *
+ * 拷贝自sleuth 2.x
+ * 未修改源码
+ * @author yugj
  */
 @Configuration
 @ConditionalOnProperty(value="spring.sleuth.enabled", matchIfMissing=true)

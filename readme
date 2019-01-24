@@ -4,3 +4,11 @@ TODO
 原Slf4jSpanLogger 逻辑，新f版本对应SpanLogger 逻辑整合
 原span logger
 SleuthLogAutoConfiguration.Slf4jConfiguration.slf4jSpanLogger
+
+2019-01-24 11:22:10 rabbitmq 打印traceid完成
+问题跟踪：
+日志多打印了：
+2019-01-24 11:20:32.482  INFO [bootstrap,d1466decbf40a24c,d1466decbf40a24c,false] 45802 --- [nio-9999-exec-1] brave.Tracer                             : {"traceId":"8b31698e6c4b6101","id":"8b31698e6c4b6101","kind":"PRODUCER","name":"publish","timestamp":1548300032482056,"duration":1,"localEndpoint":{"serviceName":"unknown","ipv4":"192.168.1.179"},"remoteEndpoint":{"serviceName":"rabbitmq"}}
+
+TODO
+定位下上面原因

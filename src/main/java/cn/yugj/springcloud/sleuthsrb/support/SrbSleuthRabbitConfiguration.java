@@ -25,11 +25,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConditionalOnProperty(value = "spring.sleuth.messaging.rabbit.enabled", matchIfMissing = true)
 @ConditionalOnClass(RabbitTemplate.class)
-//@ConditionalOnBean(Tracing.class)
-@EnableConfigurationProperties(SleuthMessagingProperties.class)
+@EnableConfigurationProperties(SrbSleuthMessagingProperties.class)
 @AutoConfigureAfter({ TraceAutoConfiguration.class })
 public class SrbSleuthRabbitConfiguration {
 
+    /**
+     * 重写默认tracing 使用 sleuth2.0 Slf4jCurrentTraceContext 默认的不处理sl4j mdc 设置traceid spanid
+     * @return Tracing
+     */
     @Bean
     Tracing tracing() {
         return Tracing.newBuilder().currentTraceContext(SrbSlf4jCurrentTraceContext.create()).build();
@@ -39,7 +42,7 @@ public class SrbSleuthRabbitConfiguration {
     @ConditionalOnMissingBean
     @Autowired
     SpringRabbitTracing springRabbitTracing(Tracing tracing,
-                                            SleuthMessagingProperties properties) {
+                                            SrbSleuthMessagingProperties properties) {
         return SpringRabbitTracing.newBuilder(tracing)
                 .remoteServiceName(properties.getMessaging().getRabbit().getRemoteServiceName())
                 .build();

@@ -21,9 +21,13 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * @author Marcin Grzejszczak
  * @since 2.0.0
+ *
+ * 拷贝自sleuth 2.x
+ * 未修改源码
+ * @author yugj
  */
 @ConfigurationProperties("spring.sleuth")
-public class SleuthMessagingProperties {
+public class SrbSleuthMessagingProperties {
 
 	private Integration integration = new Integration();
 
