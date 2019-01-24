@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2019/1/23 上午10:03.
  */
 @Configuration
-public class RabbitMqConfiguration {
+public class RabbitMq4TestConfiguration {
 
     @Bean
     public Queue queue() {

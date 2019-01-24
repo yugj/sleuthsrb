@@ -2,6 +2,7 @@ package cn.yugj.springcloud.sleuthsrb.support;
 
 import brave.Tracing;
 import brave.spring.rabbit.SpringRabbitTracing;
+import cn.yugj.springcloud.sleuthsrb.support.log.SrbSlf4jCurrentTraceContext;
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.BeansException;
@@ -27,11 +28,11 @@ import org.springframework.context.annotation.Configuration;
 //@ConditionalOnBean(Tracing.class)
 @EnableConfigurationProperties(SleuthMessagingProperties.class)
 @AutoConfigureAfter({ TraceAutoConfiguration.class })
-public class SleuthRabbitSupportConfiguration {
+public class SrbSleuthRabbitConfiguration {
 
     @Bean
     Tracing tracing() {
-        return Tracing.newBuilder().build();
+        return Tracing.newBuilder().currentTraceContext(SrbSlf4jCurrentTraceContext.create()).build();
     }
 
     @Bean
