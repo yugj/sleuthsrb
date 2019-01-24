@@ -25,7 +25,7 @@ public class SrbSleuthLogAutoConfiguration {
 
     /**
      * sleuth 1.x 定义了slf4jSpanLogger Bean
-     * 修改下名字，sleuth 2.x 对应的Bean 对象修改了
+     * 修改下名字，sleuth 2.0.2 对应的Bean 对象修改了
      * @return CurrentTraceContext
      */
     @Bean

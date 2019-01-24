@@ -35,7 +35,7 @@ import org.slf4j.MDC;
  * @since 2.0.0
  *
  * 拷贝自sleuth 2.0 Slf4jCurrentTraceContext
- * sleuth 2.x 使用brave处理相关逻辑
+ * sleuth 2.0.2 使用brave处理相关逻辑
  * 处理traceId spanId 写入mdc
  * 未修改对应源码
  * @author yugj

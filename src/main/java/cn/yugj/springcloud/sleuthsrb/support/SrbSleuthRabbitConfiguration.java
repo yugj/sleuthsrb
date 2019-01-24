@@ -30,7 +30,7 @@ import org.springframework.context.annotation.Configuration;
 public class SrbSleuthRabbitConfiguration {
 
     /**
-     * 重写默认tracing 使用 sleuth2.0 Slf4jCurrentTraceContext 默认的不处理sl4j mdc 设置traceid spanid
+     * 重写默认tracing 使用 sleuth2.0.2 Slf4jCurrentTraceContext 默认的不处理sl4j mdc 设置traceid spanid
      * @return Tracing
      */
     @Bean

@@ -38,7 +38,7 @@ import java.util.Random;
  * @author Marcin Grzejszczak
  * @since 1.0.0
  *
- * 拷贝自sleuth 2.x
+ * 拷贝自sleuth 2.0.2
  * 未修改源码
  * @author yugj
  */
