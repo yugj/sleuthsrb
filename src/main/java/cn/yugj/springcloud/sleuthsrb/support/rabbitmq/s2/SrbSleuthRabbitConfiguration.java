@@ -1,8 +1,8 @@
-package cn.yugj.springcloud.sleuthsrb.support;
+package cn.yugj.springcloud.sleuthsrb.support.rabbitmq.s2;
 
 import brave.Tracing;
 import brave.spring.rabbit.SpringRabbitTracing;
-import cn.yugj.springcloud.sleuthsrb.support.log.SrbSlf4jCurrentTraceContext;
+import cn.yugj.springcloud.sleuthsrb.support.rabbitmq.s2.log.SrbSlf4jCurrentTraceContext;
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.BeansException;

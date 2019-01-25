@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.yugj.springcloud.sleuthsrb.support;
+package cn.yugj.springcloud.sleuthsrb.support.rabbitmq.s2;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -22,9 +22,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.sleuth.*;
 import org.springframework.cloud.sleuth.autoconfig.SleuthProperties;
-import org.springframework.cloud.sleuth.log.SpanLogger;
 import org.springframework.cloud.sleuth.sampler.NeverSampler;
-import org.springframework.cloud.sleuth.trace.DefaultTracer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -61,14 +59,14 @@ public class SrbTraceAutoConfiguration {
 		return NeverSampler.INSTANCE;
 	}
 
-	@Bean
-	@ConditionalOnMissingBean(Tracer.class)
-	public Tracer sleuthTracer(Sampler sampler, Random random,
-			SpanNamer spanNamer, SpanLogger spanLogger,
-			SpanReporter spanReporter, TraceKeys traceKeys) {
-		return new DefaultTracer(sampler, random, spanNamer, spanLogger,
-				spanReporter, this.properties.isTraceId128(), traceKeys);
-	}
+//	@Bean
+//	@ConditionalOnMissingBean(Tracer.class)
+//	public Tracer sleuthTracer(Sampler sampler, Random random,
+//			SpanNamer spanNamer, SpanLogger spanLogger,
+//			SpanReporter spanReporter, TraceKeys traceKeys) {
+//		return new DefaultTracer(sampler, random, spanNamer, spanLogger,
+//				spanReporter, this.properties.isTraceId128(), traceKeys);
+//	}
 
 	@Bean
 	@ConditionalOnMissingBean

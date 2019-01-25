@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.yugj.springcloud.sleuthsrb.support.log;
+package cn.yugj.springcloud.sleuthsrb.support.rabbitmq.s2.log;
 
 import brave.internal.HexCodec;
 import brave.internal.Nullable;

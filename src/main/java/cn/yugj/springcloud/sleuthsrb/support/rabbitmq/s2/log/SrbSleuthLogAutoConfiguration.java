@@ -1,4 +1,4 @@
-package cn.yugj.springcloud.sleuthsrb.support.log;
+package cn.yugj.springcloud.sleuthsrb.support.rabbitmq.s2.log;
 
 import brave.propagation.CurrentTraceContext;
 import org.slf4j.MDC;

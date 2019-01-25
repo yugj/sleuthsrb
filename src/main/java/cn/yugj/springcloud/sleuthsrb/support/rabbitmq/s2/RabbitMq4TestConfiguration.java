@@ -1,4 +1,4 @@
-package cn.yugj.springcloud.sleuthsrb.support;
+package cn.yugj.springcloud.sleuthsrb.support.rabbitmq.s2;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;

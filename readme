@@ -12,3 +12,9 @@ SleuthLogAutoConfiguration.Slf4jConfiguration.slf4jSpanLogger
 
 TODO
 定位下上面原因
+
+s1
+    基于sleuth1.x 简单针对RabbitListener管理rabbitmq span
+
+s2
+    基于sleuth2.x 拷贝brave处理逻辑支持管理rabbitmq span
